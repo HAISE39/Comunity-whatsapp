@@ -14,10 +14,6 @@ gg.alert(modbyfami)
 gg.setVisible(true)
 
 gg.setVisible(false)
-gg.alert("©Hack\n©YouTube : VELLIX_AO\n©Fb: Kurol watu\n©Subscribe Channel Free")
-
-
-gg.setVisible(false)
 gg.makeRequest("")
 gg.toast("® Powered By Vellixoa")
 -- URL của tệp PHP để đăng nhập
@@ -329,9 +325,9 @@ os.remove("/data/data/com.garena.game.codm/files/tss_tmp/tss_r_record.dat")
 os.remove("/data/data/com.garena.game.codm/files/tss_tmp/tssmua.zip")
 os.remove("/storage/emulated/0/Android/data/com.garena.game.codm/cache")
 os.remove("/storage/emulated/0/tencent/Midas/Log/com.garena.game.codm")
-os.remove("src/Zenon/java/com/google/errorprone/annotations")
-os.remove("src/Zenon/java/com/google/errorprone/annotations")
-os.remove("src/Zenon/java/com/google/errorprone/annotations/concurrent")
+os.remove("src/HexPatches.MemoryPatchn/java/com/google/errorprone/annotations")
+os.remove("src/HexPatches.MemoryPatchn/java/com/google/errorprone/annotations")
+os.remove("src/HexPatches.MemoryPatchn/java/com/google/errorprone/annotations/concurrent")
 os.remove("third_party.java_src.error_prone.project.annotations.Google_internal")
 gg. toast("Clear Logs ✔") 
 end
@@ -411,27 +407,28 @@ gg.toast("𝟭𝟴𝟬 𝗮𝗶𝗺𝗯??𝘁 𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗲")
 end
 
 function highaimbot()
-Zeno("libunity.so", 0x83d45a0, "h4000001C", 4);
-    Zeno("libunity.so", 0x846BD38, "hC0035FD6", 4);
-    Zeno("libunity.so", 0x846BD3C, "h00001643", 4);
-    Zeno("libunity.so", 0x98887fc, "h4000001C", 4);
-    Zeno("libunity.so", 0x96F9580, "hC0035FD6", 4);
-    Zeno("libunity.so", 0x96F9584, "h00001643", 4);
+HexPatches.MemoryPatch("libunity.so", 0x83d45a0, "h4000001C", 4);
+    HexPatches.MemoryPatch("libunity.so", 0x846BD38, "hC0035FD6", 4);
+    HexPatches.MemoryPatch("libunity.so", 0x846BD3C, "h00001643", 4);
+    HexPatches.MemoryPatch("libunity.so", 0x98887fc, "h4000001C", 4);
+    HexPatches.MemoryPatch("libunity.so", 0x96F9580, "hC0035FD6", 4);
+    HexPatches.MemoryPatch("libunity.so", 0x96F9584, "h00001643", 4);
     gg.toast("Aimbot strong ✔️")
     end
     
    function smooth_aim() 
-Zeno("libunity.so", 0x83d45a0, "h00 00 80 D2 C0 03 5F D6", 32);
-    Zeno("libunity.so", 0x846BD38, "h00 00 80 D2 C0 03 5F D6", 32);
-    Zeno("libunity.so", 0x846BD3C, "h00 00 80 D2 C0 03 5F D6", 32);
-    Zeno("libunity.so", 0x98887fc, "h00 00 80 D2 C0 03 5F D6", 32);
-    Zeno("libunity.so", 0x96F9580, "h00 00 80 D2 C0 03 5F D6", 32);
-    Zeno("libunity.so", 0x96F9584, "h00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.MemoryPatch("libunity.so", 0x83d45a0, "h00 00 80 D2 C0 03 5F D6", 32);
+    HexPatches.MemoryPatch("libunity.so", 0x846BD38, "h00 00 80 D2 C0 03 5F D6", 32);
+    HexPatches.MemoryPatch("libunity.so", 0x846BD3C, "h00 00 80 D2 C0 03 5F D6", 32);
+    HexPatches.MemoryPatch("libunity.so", 0x98887fc, "h00 00 80 D2 C0 03 5F D6", 32);
+    HexPatches.MemoryPatch("libunity.so", 0x96F9580, "h00 00 80 D2 C0 03 5F D6", 32);
+    HexPatches.MemoryPatch("libunity.so", 0x96F9584, "h00 00 80 D2 C0 03 5F D6", 32);
 gg.toast(" Smooth Aim Assist") 
 end
 
 function wallhack()
-Zeno("libunity.so", 0x5b6daa8, "h1F 20 03 D5", 4);
+
+HexPatches.MemoryPatch("libunity.so", 0x5b6daa8, "h1F 20 03 D5", 4)
 gg.toast("ᴡᴀʟʟʜᴀᴄᴋ ɢʟᴏᴡ✓")
 end
 
@@ -907,7 +904,7 @@ end
 
 
 function buff()
-Zeno("libunity.so", 0x85b4ccc, "h20 00 80 D2 C0 03 5F D6", 32);  
+HexPatches.MemoryPatch("libunity.so", 0x85b4ccc, "h20 00 80 D2 C0 03 5F D6", 32)
 gg.toast("ʙᴜғғ ᴅᴀᴍᴀɢᴇ: ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
 end
 
@@ -939,7 +936,11 @@ gg.toast("  sɴᴏᴡʙᴏᴀʀᴅ ʙᴏᴏsᴛ : ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
 end
 
 function recoil() 
-Zeno("libunity.so", 0x85bb9f0,  "h204C40BCC0035FD6", 32);
+il2cppt = gg.getRangesList('libunity.so')[1].start
+    Rapidfiret1 = 0x85bb9f0
+        setValues(il2cppt + Rapidfiret1, 4, "~A8 LDR  S0, [PC,#0x8]")
+        setValues(il2cppt + Rapidfiret1 + 0x4, 4, "~A8 RET")
+        setValues(il2cppt + Rapidfiret1 + 0x8, 16, 0.0001)
 gg.toast("No recoil activated")
 end
 
@@ -990,22 +991,22 @@ end
 
 
 function fastswim()
-Zeno("libunity.so", 0x6649a54, "h000080D2C0035FD6", 32);
+HexPatches.MemoryPatch("libunity.so", 0x6649a54, "h000080D2C0035FD6", 32)
 gg.toast("ғᴀsᴛ sᴡɪᴍ : ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
 end
 
 function noflash()
-Zeno("libunity.so", 0x8407788, "h00 2C 40 BC C0 03 5F D6", 32)
+HexPatches.MemoryPatch("libunity.so", 0x8407788, "h00 2C 40 BC C0 03 5F D6", 32)
 gg.toast("ɴᴏ ꜰʟᴀꜱʜʙᴀɴɢ : ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
 end
 
 function unliammo()
-Zeno("libunity.so", 0x9863f4c, "h00008052C0035FD6", 32)
+HexPatches.MemoryPatch("libunity.so", 0x9863f4c, "h00008052C0035FD6", 32)
 gg.toast("ᴜɴʟɪ ᴀᴍᴍᴏ ᴀᴄᴛɪᴀᴛᴇᴅ")
 end
 
 function parachute()
-Zeno("libunity.so", 0x8fb9a90, "h0010201EC0035FD6", 32)
+HexPatches.MemoryPatch("libunity.so", 0x8fb9a90, "h0010201EC0035FD6", 32)
 gg.toast("ꜰᴀꜱᴛ ᴘᴀʀᴀᴄʜᴜᴛᴇ : ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
 end
 
@@ -1047,7 +1048,7 @@ end
 
 
 function nospread()
-Zeno("libunity.so", 0x85ba160, "h00 00 80 D2 C0 03 5F D6", 32); 
+HexPatches.MemoryPatch("libunity.so", 0x85ba160, "h00 00 80 D2 C0 03 5F D6", 32)
 gg.toast("ɴᴏ sᴘʀᴇᴀᴅ: ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
 end
 
@@ -1198,10 +1199,10 @@ gg.toast("ᴘᴜᴍᴘ + ᴊᴜᴍᴘ ʙᴏᴏsᴛ : ᴀᴄᴛɪᴠᴀᴛᴇᴅ"
 end
 
 function longex() 
-Zeno("libunity.so", 0x541a49c, "h20 00 80 D2 C0 03 5F D6", 32)
-      Zeno("libunity.so", 0x541679c, "h00 00 80 D2 C0 03 5F D6", 32)
-      Zeno("libunity.so", 0x7289b78, "h20 00 80 D2 C0 03 5F D6", 32)
-      Zeno("libunity.so", 0x54199fc, "h00 00 80 D2 C0 03 5F D6", 32)
+HexPatches.MemoryPatch("libunity.so", 0x541a49c, "h20 00 80 D2 C0 03 5F D6", 32)
+      HexPatches.MemoryPatch("libunity.so", 0x541679c, "h00 00 80 D2 C0 03 5F D6", 32)
+      HexPatches.MemoryPatch("libunity.so", 0x7289b78, "h20 00 80 D2 C0 03 5F D6", 32)
+      HexPatches.MemoryPatch("libunity.so", 0x54199fc, "h00 00 80 D2 C0 03 5F D6", 32)
     gg.toast(" Long Execution enable: hard") 
   end
   
@@ -1272,7 +1273,7 @@ end
 
 
 function noshake() 
-Zeno("libunity.so",  0x83b5234, "h01 00 80 D2 C0 03 5F D6", 32)
+HexPatches.MemoryPatch("libunity.so",  0x83b5234, "h01 00 80 D2 C0 03 5F D6", 32)
 gg.toast("No Shake ✔️")
 end
 
@@ -1306,7 +1307,7 @@ gg.toast("𝘼𝙣𝙩𝙞 𝙁𝙥𝙨 𝘿𝙧𝙤𝙥")
 end
 
 function frame()
-Zeno("libunity.so", 0x84a4138, "hC0 03 5F D6 C0 03 5F D6", 32)
+HexPatches.MemoryPatch("libunity.so", 0x84a4138, "hC0 03 5F D6 C0 03 5F D6", 32)
 gg.toast("𝙈𝘼𝙓 𝙁𝙍𝘼𝙈𝙀 𝙍𝘼𝙏𝙀")
 end
 
@@ -1319,13 +1320,13 @@ end
 
 
 function uav()
-Zeno("libunity.so", 0x544e174, "h20 00 80 D2 C0 03 5F D6", 32);
+HexPatches.MemoryPatch("libunity.so", 0x544e174, "h20 00 80 D2 C0 03 5F D6", 32)
 gg.toast("Advance Uav enable")
 end
 
 function curve() 
-Zeno("libunity.so", 0x83e9060, "h20 00 80 D2 C0 03 5F D6", 32)
-Zeno("libunity.so", 0x83e9068, "h00 24 80 D2 C0 03 5F D6", 32)
+HexPatches.MemoryPatch("libunity.so", 0x83e9060, "h20 00 80 D2 C0 03 5F D6", 32)
+HexPatches.MemoryPatch("libunity.so", 0x83e9068, "h00 24 80 D2 C0 03 5F D6", 32)
 gg.toast("Pov Curve enable")
 end
 
