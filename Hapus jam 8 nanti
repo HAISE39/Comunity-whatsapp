@@ -1,0 +1,1878 @@
+T = gg.getTargetPackage ()
+if T == "com.asobimo.aurcusonline.ww" then
+
+
+gg.setVisible(false)
+modbyfami = os.date ('           ⚡MODMENU BY VELLIX⚡\
+\
+           ❦ ════ •⊰❂ - ❂⊱• ════ ❦\
+\
+📆Dᴀᴛᴇ📆 : %Y/%m/%d\
+\
+🕛Tɪᴍᴇ🕛 : %H:%M:%S\
+\
+⏳Exᴘɪʀᴇᴅ Sᴄʀɪᴘᴛ⏳ : 0000/00/00\
+\
+           ❦ ════ •⊰❂ - ❂⊱• ════ ❦')
+gg.alert(modbyfami)
+gg.setVisible(true)
+
+gg.setVisible(false)
+gg.alert("©Hack\n©YouTube : VELLIX_AO\n©Fb: Kurol watu\n©Subscribe Channel Free")
+
+function HOME()
+gg.setVisible(false)
+HOMEMENU = gg.choice({
+"____MENU____",
+
+"📁 UNTUK FARM ",
+
+"📁 UNTUK DUGEON ",
+
+"📁 TELEPORT ",
+
+"📁 Skill Farm Cowok",
+
+"📁 Skill Farm Cewek",
+
+"📁 croot",
+
+"📖 SAVED ITEM",
+
+"📖 QUEST BONUS",
+
+"🔚【EXIT】🔚",
+
+}, nil,"⏩⏩SCRIPT VIP VELLIX_AO⏪⏪\nVELLIX_AO Aurcus Online\n🇮🇩 Aurcus 3.1.11 GLOBAL🇮🇩")
+if HOMEMENU == 1 then HOME()
+ end
+if HOMEMENU == 2 then LOBYM()
+ end
+if HOMEMENU == 3 then GAMEM()
+ end
+ if HOMEMENU == 4 then TP()
+ end
+ if HOMEMENU == 5 then GAMEEM()
+end
+if HOMEMENU == 6 then GAMEZ()
+ end
+ if HOMEMENU == 7 then crt()
+ end
+ if HOMEMENU == 8 then bag()
+ end
+ if HOMEMENU == 9 then qttp()
+ end
+if HOMEMENU == 10 then Exit()
+ end
+HOMEDM = -1
+end
+
+function LOBYM()
+LBMENU = gg.multiChoice({
+"🔙❌【LOBY】❌🔙",
+
+"📖CHEAT STATUS",
+
+"📒SCRIPT SETTA",
+
+"📒SCRIPT EVEHOME",
+
+"📒LOOP SKILL",
+
+"📖Auto Loot Eve",
+
+"📖Auto Loot Setta",
+
+"📒BUFF",
+
+"🔙❌【EXIT】❌🔙",
+
+}, nil,"⏩⏩SCRIPT VIP VELLIX_AO⏪⏪\nVELLIX_AO Aurcus Online\n🇮🇩 Aurcus 3.1.11 GLOBAL🇮🇩")
+if LBMENU == nil then else
+if LBMENU[1] == true then LOBYM() end
+if LBMENU[2] == true then gp() end
+if LBMENU[3] == true then st() end
+if LBMENU[4] == true then ev() end
+if LBMENU[5] == true then ls() end
+if LBMENU[6] == true then ale() end
+if LBMENU[7] == true then als() end
+if LBMENU[8] == true then buffp() end
+if LBMENU[9] == true then HOME() end
+ end
+end
+
+function gp()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+d=gg.prompt({
+	"Select"}, {data}, {"number"})
+gg.searchNumber("211';"..d[1]..';200',gg.TYPE_DWORD)
+gg.getResults (10)
+gg.refineAddress("D8", -1, gg.TYPE_DWORD, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber(d[1], gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+r = gg.getResults (1)
+L={'', '', '', '', '', ''} 
+LD = 0
+for i=0, 6, 1 do
+	if gg.isVisible(true) and i ~= 6 then
+		gg.setVisible(false)
+	end
+	gg.sleep(1000)
+	gg.toast('Loading: '..L[1]..L[2]..L[3]..L[4]..L[5]..L[6]..' '..LD..'/120%')
+	LD = LD + 20
+	table.remove(L)
+	table.insert(L, 2, "")
+	if i == 6 then
+		gg.sleep(2000)
+end
+end        
+local L0_0 = {}
+         L0_0 = {}
+    L0_0[1] = {}
+    L0_0[1].address = r[1].address + -72
+    L0_0[1].flags = gg.TYPE_DWORD
+    L0_0[1].value = "999999999"
+    L0_0[1].freeze = true
+    L0_0[2] = {}
+    L0_0[2].address = r[1].address + 300
+    L0_0[2].flags = gg.TYPE_DWORD
+    L0_0[2].value = "-999"
+    L0_0[2].freeze = true
+    L0_0[3] = {}
+    L0_0[3].address = r[1].address + 304
+    L0_0[3].flags = gg.TYPE_DWORD
+    L0_0[3].value = "-999"
+    L0_0[3].freeze = true
+    L0_0[4] = {}
+    L0_0[4].address = r[1].address + 340
+    L0_0[4].flags = gg.TYPE_DWORD
+    L0_0[4].value = "-999999999"
+    L0_0[4].freeze = true
+    gg.setValues(L0_0)
+    gg.addListItems(L0_0)
+  local ox = {}
+ox= gg.prompt({
+	"Select: [5;10000]"}, {data}, {"number"})
+	gg.editAll(ox[1], 4)
+	revert = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
+local t = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_DWORD then
+		v.value = ox [1]
+		v.freeze = true
+	end
+end
+gg.addListItems(t)
+t = nil
+end
+
+function buffp()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("65536;1;211~212:13", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("211", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_DWORD then
+		v.value = "375"
+		v.freeze = true
+	end
+end
+gg.addListItems(t)
+t = nil
+gg.processResume()
+end
+
+function st()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("15D;1D;1065353216D;1008981770D;1058642330D;1072064102D;5379D:33", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+
+gg.searchNumber("168D;1D;1008981770D;1056964608D;1072064102D;1311D:33", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+
+gg.searchNumber("12;1;1072064102;1056964608;1008981770;1072064102;3614:33", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+end
+
+function ev()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("95;1008981770::50", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+
+gg.searchNumber("88;1008981770::50", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+
+gg.searchNumber("172;1008981770::50", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+
+gg.searchNumber("256;1008981770::50", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+
+gg.searchNumber("257;1008981770::50", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+
+gg.searchNumber("88;1008981770::50", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+end
+
+function ls()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("119;0;16777216:13", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("119", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_DWORD then
+		v.value = "40"
+		v.freeze = true
+	end
+end
+gg.addListItems(t)
+t = nil
+
+gg.clearResults()
+gg.processResume()
+end
+
+function ale()
+nloot = gg.multiChoice({
+"🔙❌【LOOT EVEHOME】❌🔙",
+
+                "  STEP 1",
+
+               "  STEP 2 ",
+               
+               "  STEP 3 ",
+
+         "🔙❌【EXIT】❌🔙",
+
+}, nil,"⏩⏩SCRIPT VIP VELLIX_AO⏪⏪\nVELLIX_AO Aurcus Online\n🇮🇩 Aurcus 3.1.11 GLOBAL🇮🇩")
+if nloot == nil then else
+if nloot[1] == true then ale() end
+if nloot[2] == true then s1() end
+if nloot[3] == true then s2() end
+if nloot[4] == true then s3() end
+if nloot[7] == true then HOME() end
+end
+end
+
+function s1()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("Q9A99'w'\"B\"0090'@33'C0'B'", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("Q9A99'w'\"B\"0090'@33'C0'B'", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.sleep(3000)
+gg.processResume()
+gg.searchFuzzy("0", gg.SIGN_FUZZY_EQUAL, gg.TYPE_BYTE, 0, -1, 0)
+gg.sleep(3000)
+gg.processResume()
+gg.alert("📁PROSES PENGAMBILAN DATA RESOURCE\nJANGAN BERGERAK🖐️")
+gg.toast("▓▒▒▒▒▒▒▒▒▒10%")
+gg.sleep(1200)
+gg.toast("▓▓▒▒▒▒▒▒▒▒20%")
+gg.sleep(1300)
+gg.toast("▓▓▓▒▒▒▒▒▒▒30%")
+gg.sleep(1400)
+gg.toast("▓▓▓▓▒▒▒▒▒▒40%")
+gg.searchFuzzy("0", gg.SIGN_FUZZY_EQUAL, gg.TYPE_BYTE, 0, -1, 0)
+gg.sleep(3000)
+gg.processResume()
+gg.toast("▓▓▓▓▓▒▒▒▒▒50%")
+gg.sleep(1600)
+gg.toast("▓▓▓▓▓▓▒▒▒▒60%")
+gg.refineNumber("-64", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep(1700)
+gg.toast("▓▓▓▓▓▓▓▒▒▒70%")
+gg.sleep(1800)
+gg.toast("▓▓▓▓▓▓▓▓▒▒80%")
+gg.refineAddress("2", -1, gg.TYPE_BYTE, gg.SIGN_EQUAL, 0, -1, 0)
+gg.sleep(1900)
+gg.toast("▓▓▓▓▓▓▓▓▓▒90%")
+gg.sleep(2000)
+gg.toast("▓▓▓▓▓▓▓▓▓▓100%")
+gg.sleep(2000)
+gg.toast("💯 COMPLETED RESOURCES FILES👈")
+gg.processResume()
+r1 = gg.getResults (1)
+end
+
+function s2()
+local L0_1 = {}
+         L0_1 = {}
+    L0_1[1] = {}
+    L0_1[1].address = r1[1].address + 0
+    L0_1[1].flags = gg.TYPE_BYTE
+    L0_1[1].value = "-105"
+    L0_1[1].freeze = false
+    L0_1[2] = {}
+    L0_1[2].address = r1[1].address + -6
+    L0_1[2].flags = gg.TYPE_FLOAT
+    L0_1[2].value = "5"
+    L0_1[2].freeze = false
+    L0_1[3] = {}
+    L0_1[3].address = r1[1].address + -8
+    L0_1[3].flags = gg.TYPE_WORD
+    L0_1[3].value = "17071"
+    L0_1[3].freeze = false
+    
+    gg.setValues(L0_1)
+    gg.addListItems(L0_1)
+end
+
+function s3()
+for i = 10000,2000000 do
+gg.sleep(100)
+gg.editAll("-103,", gg.TYPE_BYTE)
+gg.editAll("17064", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-101,", gg.TYPE_BYTE)
+gg.editAll("17064", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-99,", gg.TYPE_BYTE)
+gg.editAll("17059", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-102,", gg.TYPE_BYTE)
+gg.editAll("17057", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-105,", gg.TYPE_BYTE)
+gg.editAll("17057", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-107,", gg.TYPE_BYTE)
+gg.editAll("17059", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-108,", gg.TYPE_BYTE)
+gg.editAll("17061", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-112,", gg.TYPE_BYTE)
+gg.editAll("17064", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-106,", gg.TYPE_BYTE)
+gg.editAll("17064", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-104,", gg.TYPE_BYTE)
+gg.editAll("17066", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-101,", gg.TYPE_BYTE)
+gg.editAll("17063", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-103,", gg.TYPE_BYTE)
+gg.editAll("17062", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-105,", gg.TYPE_BYTE)
+gg.editAll("17063", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-104,", gg.TYPE_BYTE)
+gg.editAll("17058", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-102,", gg.TYPE_BYTE)
+gg.editAll("17060", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-102,", gg.TYPE_BYTE)
+gg.editAll("17064", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-105,", gg.TYPE_BYTE)
+gg.editAll("17060", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-101,", gg.TYPE_BYTE)
+gg.editAll("17058", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-100,", gg.TYPE_BYTE)
+gg.editAll("17063", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-105,", gg.TYPE_BYTE)
+gg.editAll("17114", gg.TYPE_WORD)
+gg.editAll("7", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-99,", gg.TYPE_BYTE)
+gg.editAll("17115", gg.TYPE_WORD)
+gg.editAll("7", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-101,", gg.TYPE_BYTE)
+gg.editAll("17121", gg.TYPE_WORD)
+gg.editAll("7", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("101,", gg.TYPE_BYTE)
+gg.editAll("17139", gg.TYPE_WORD)
+gg.editAll("8", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-61,", gg.TYPE_BYTE)
+gg.editAll("17029", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-61,", gg.TYPE_BYTE)
+gg.editAll("17023", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-57,", gg.TYPE_BYTE)
+gg.editAll("17024", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-55,", gg.TYPE_BYTE)
+gg.editAll("17022", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-63,", gg.TYPE_BYTE)
+gg.editAll("17011", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-64,", gg.TYPE_BYTE)
+gg.editAll("16997", gg.TYPE_WORD)
+gg.editAll("4.5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-66,", gg.TYPE_BYTE)
+gg.editAll("16987", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-81,", gg.TYPE_BYTE)
+gg.editAll("16970", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-102,", gg.TYPE_BYTE)
+gg.editAll("16979", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-104,", gg.TYPE_BYTE)
+gg.editAll("16973", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-102,", gg.TYPE_BYTE)
+gg.editAll("17048", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-103,", gg.TYPE_BYTE)
+gg.editAll("17062", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+end
+end
+
+function als()
+nlsoot = gg.multiChoice({
+"🔙❌【LOOT SETTA】❌🔙",
+
+                "  STEP 1",
+
+               "  STEP 2 ",
+               
+               "  STEP 3 ",
+
+         "🔙❌【EXIT】❌🔙",
+
+}, nil,"⏩⏩SCRIPT VIP VELLIX_AO⏪⏪\nVELLIX_AO Aurcus Online\n🇮🇩 Aurcus 3.1.11 GLOBAL🇮🇩")
+if nlsoot == nil then else
+if nlsoot[1] == true then als() end
+if nlsoot[2] == true then ss1() end
+if nlsoot[3] == true then ss2() end
+if nlsoot[4] == true then ss3() end
+if nlsoot[5] == true then os.exit() end
+end
+end
+
+function ss1()
+gg.setVisible(false)
+gg.processResume()
+gg.toast('STAR SEARCH🔍')
+gg.searchNumber("92", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.toast('LETS RUN 1✔️')
+gg.sleep(5000)
+gg.searchFuzzy("0", gg.SIGN_FUZZY_GREATER, gg.TYPE_BYTE, 0, -1, 0)
+gg.processResume()gg.toast('LETS RUN 2 ✔️')
+gg.sleep(5000)
+gg.searchFuzzy("0", gg.SIGN_FUZZY_GREATER, gg.TYPE_BYTE, 0, -1, 0)
+gg.processResume()
+gg.toast('LETS RUN 3✔️')
+gg.sleep(5000)
+gg.searchFuzzy("0", gg.SIGN_FUZZY_GREATER, gg.TYPE_BYTE, 0, -1, 0)
+gg.processResume()
+gg.toast('BACK TO START')
+gg.sleep(10000)
+gg.refineNumber("92", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineAddress("2", -1, gg.TYPE_BYTE, gg.SIGN_EQUAL, 0, -1, 0)
+r1 = gg.getResults (1)
+gg.editAll("90", gg.TYPE_BYTE)
+
+local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.addListItems(t)
+t = nil
+
+end
+
+function ss2()
+local LS0_1 = {}
+         LS0_1 = {}
+    LS0_1[1] = {}
+    LS0_1[1].address = r1[1].address + -6
+    LS0_1[1].flags = gg.TYPE_FLOAT
+    LS0_1[1].value = "25"
+    LS0_1[1].freeze = false
+    LS0_1[2] = {}
+    LS0_1[2].address = r1[1].address + -8
+    LS0_1[2].flags = gg.TYPE_WORD
+    LS0_1[2].value = "17125"
+    LS0_1[2].freeze = false
+    
+    gg.setValues(LS0_1)
+    gg.addListItems(LS0_1)
+end
+
+function ss3()
+for i = 10000,2000000 do
+gg.sleep(100)
+gg.editAll("96,", gg.TYPE_BYTE)
+gg.editAll("17116", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("99,", gg.TYPE_BYTE)
+gg.editAll("17118", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("92,", gg.TYPE_BYTE)
+gg.editAll("17119", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("89,", gg.TYPE_BYTE)
+gg.editAll("17114", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("93,", gg.TYPE_BYTE)
+gg.editAll("17112", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("99,", gg.TYPE_BYTE)
+gg.editAll("17112", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("104,", gg.TYPE_BYTE)
+gg.editAll("17113", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("108,", gg.TYPE_BYTE)
+gg.editAll("17116", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("103,", gg.TYPE_BYTE)
+gg.editAll("17118", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("93,", gg.TYPE_BYTE)
+gg.editAll("17118", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("94,", gg.TYPE_BYTE)
+gg.editAll("17115", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("100,", gg.TYPE_BYTE)
+gg.editAll("17113", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("39,", gg.TYPE_BYTE)
+gg.editAll("17113", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("30,", gg.TYPE_BYTE)
+gg.editAll("17117", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("35,", gg.TYPE_BYTE)
+gg.editAll("17120", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("41,", gg.TYPE_BYTE)
+gg.editAll("17121", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("46,", gg.TYPE_BYTE)
+gg.editAll("17120", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("41,", gg.TYPE_BYTE)
+gg.editAll("17117", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("37,", gg.TYPE_BYTE)
+gg.editAll("17116", gg.TYPE_WORD)
+gg.editAll("4", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("31,", gg.TYPE_BYTE)
+gg.editAll("17117", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("30,", gg.TYPE_BYTE)
+gg.editAll("17122", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("40,", gg.TYPE_BYTE)
+gg.editAll("17115", gg.TYPE_WORD)
+gg.editAll("5", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("35,", gg.TYPE_BYTE)
+gg.editAll("17136", gg.TYPE_WORD)
+gg.editAll("7", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("47,", gg.TYPE_BYTE)
+gg.editAll("17152", gg.TYPE_WORD)
+gg.editAll("8", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("49,", gg.TYPE_BYTE)
+gg.editAll("17153", gg.TYPE_WORD)
+gg.editAll("9", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("55,", gg.TYPE_BYTE)
+gg.editAll("17153", gg.TYPE_WORD)
+gg.editAll("9", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("64,", gg.TYPE_BYTE)
+gg.editAll("17154", gg.TYPE_WORD)
+gg.editAll("10", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("75,", gg.TYPE_BYTE)
+gg.editAll("17155", gg.TYPE_WORD)
+gg.editAll("10", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("96,", gg.TYPE_BYTE)
+gg.editAll("17156", gg.TYPE_WORD)
+gg.editAll("9", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("95,", gg.TYPE_BYTE)
+gg.editAll("17157", gg.TYPE_WORD)
+gg.editAll("9", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("104,", gg.TYPE_BYTE)
+gg.editAll("17156", gg.TYPE_WORD)
+gg.editAll("9", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-120,", gg.TYPE_BYTE)
+gg.editAll("17146", gg.TYPE_WORD)
+gg.editAll("7", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-106,", gg.TYPE_BYTE)
+gg.editAll("17056", gg.TYPE_WORD)
+gg.editAll("3", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-101,", gg.TYPE_BYTE)
+gg.editAll("17028", gg.TYPE_WORD)
+gg.editAll("3", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-104,", gg.TYPE_BYTE)
+gg.editAll("17030", gg.TYPE_WORD)
+gg.editAll("3", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-107,", gg.TYPE_BYTE)
+gg.editAll("17019", gg.TYPE_WORD)
+gg.editAll("3", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-110,", gg.TYPE_BYTE)
+gg.editAll("16999", gg.TYPE_WORD)
+gg.editAll("3", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-111,", gg.TYPE_BYTE)
+gg.editAll("16991", gg.TYPE_WORD)
+gg.editAll("3", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-116,", gg.TYPE_BYTE)
+gg.editAll("16984", gg.TYPE_WORD)
+gg.editAll("3", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-118,", gg.TYPE_BYTE)
+gg.editAll("16978", gg.TYPE_WORD)
+gg.editAll("3", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-116,", gg.TYPE_BYTE)
+gg.editAll("16982", gg.TYPE_WORD)
+gg.editAll("3", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-112,", gg.TYPE_BYTE)
+gg.editAll("16989", gg.TYPE_WORD)
+gg.editAll("3", gg.TYPE_FLOAT)
+gg.sleep(100)
+gg.editAll("-110,", gg.TYPE_BYTE)
+gg.editAll("16996", gg.TYPE_WORD)
+gg.editAll("3", gg.TYPE_FLOAT)
+end
+end
+
+function GAMEM()
+DMGAME = gg.multiChoice({
+"🔙❌【DUGEON】❌🔙",
+
+"📒NK",
+
+"📒GATE 1",
+
+"📒GATE 2",
+
+"📒GATE 3",
+
+"📒GATE4",
+
+"📒GATE5",
+
+"📒GATE6",
+
+"📒GATE7",
+
+"📒GATE8",
+
+"📒RESET SKILL",
+
+"📚ALL DUGEON",
+
+"📖 GUILD MISION ",
+
+"🔙❌【EXIT】❌🔙",
+
+}, nil, "⏩⏩SCRIPT VIP VELLIX_AO⏪⏪\nVELLIX_AO Aurcus Online\n🇮🇩 Aurcus 3.1.11 GLOBAL🇮🇩")
+if DMGAME == nil then else
+if DMGAME[1] == true then DMGAME() end
+if DMGAME[2] == true then nk() end
+if DMGAME[3] == true then g1()end
+if DMGAME[4] == true then g2()end
+if DMGAME[5] == true then g3()end
+if DMGAME[6] == true then g4()end
+ if DMGAME[7] == true then g5()end
+ if DMGAME[8] ==  true then g6()end
+ if DMGAME[9] == true then g7()end
+ if DMGAME[10] ==  true then g8()end
+if DMGAME[11] == true then rs() end
+if DMGAME[12] == true then dg() end
+if DMGAME[13] == true then TPP() end
+if DMGAME[14] == true then HOME() end
+ end
+end
+
+function nk()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("246;1008981770;1800;1175::50", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+
+gg.searchNumber("161;1008981770;1556;1176::50", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+
+gg.searchNumber("96;1008981770;3085;1174::50", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+
+gg.searchNumber("1081;1008981770;1285;1164::50", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+
+gg.searchNumber("95;1008981770;3081;1177::50", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+
+gg.searchNumber("257D;1008981770;2569D;1074D::50", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+
+gg.searchNumber("124;1008981770;2566;1178::50", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+end
+
+function g1() 
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("212;1;1069547520;1008981770;50331905:29", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+end
+
+function g2() 
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("586;1;1065353216;1008981770;1080033280;16777473:29", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.searchNumber("586;1;1066192077;1008981770;1082130432;33554689:29", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+gg.toast('Area Gate 2 : Actived✔️')
+end
+
+function g3() 
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("699;1;1065353216;1008981770;1069547520;1082549862;1082549862;16777473:29", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+end
+
+function g4()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("836;1008981770;1280;937:45", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+end
+
+function g5()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("662D;1008981770;10280;949;662;1008981770;10280;950:125", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+end
+
+function g6()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("257D;1008981770;2569D;1074D::50", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+end
+
+function g7()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("1061;1008981770;2565;1154:45", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+end
+
+function g8 () 
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("865D;1008981770D;1554D;1181D:45", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-1", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+end
+
+
+function Exit()
+print("⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⢛⡛⠿⠛⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⣿⣿⣿⡿⠟⡉⣡⡖⠘⢗⣀⣀⡀⢢⣐⣤⣉⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⣿⡿⠉⣠⣲⣾⡭⣀⢟⣩⣶⣶⡦⠈⣿⣿⣿⣷⣖⠍⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⡛⢀⠚⢩⠍⠀⠀⠡⠾⠿⣋⡥⠀⣤⠈⢷⠹⣿⣎⢳⣶⡘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⡏⢀⡤⠉⠀⠀⠀⣴⠆⠠⠾⠋⠁⣼⡿⢰⣸⣇⢿⣿⡎⣿⡷⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⠀⢸⢧⠁⠀⠀⢸⠇⢐⣂⣠⡴⠶⣮⢡⣿⢃⡟⡘⣿⣿⢸⣷⡀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣯⢀⡏⡾⢠⣿⣶⠏⣦⢀⠈⠉⡙⢻⡏⣾⡏⣼⠇⢳⣿⡇⣼⡿⡁⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⠈⡇⡇⡘⢏⡃⠀⢿⣶⣿⣷⣿⣿⣿⡘⡸⠇⠌⣾⢏⡼⣿⠇⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⡀⠀⢇⠃⢢⡙⣜⣾⣿⣿⣿⣿⣿⣿⣧⣦⣄⡚⣡⡾⣣⠏⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣷⡀⡀⠃⠸⣧⠘⢿⣿⣿⣿⣿⣿⣻⣿⣿⣿⣿⠃⠘⠁⢈⣤⡀⣬⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⣇⣅⠀⠀⠸⠀⣦⡙⢿⣿⣿⣿⣿⣿⣿⡿⠃⢀⣴⣿⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⡿⢛⣉⣉⣀⡀⠀⢸⣿⣿⣷⣬⣛⠛⢛⣩⣵⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⢋⣴⣿⣿⣿⣿⣿⣦⣬⣛⣻⠿⢿⣿⡇⠈⠙⢛⣛⣩⣭⣭⣝⡛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⡇⣼⣿⣿⣿⣿⣿⡿⡹⢿⣿⣽⣭⣭⣭⣄⣙⠻⢿⣿⡿⣝⣛⣛⡻⢆⠙⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⢥⣿⣿⣿⣿⣿⣿⢇⣴⣿⣿⣿⣿⣿⡿⣿⣿⣿⣷⣌⢻⣿⣿⣿⣿⣿⣷⣶⣌⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⡆⣿⣿⣿⣿⣿⡟⣸⣿⡿⣿⣿⣿⣿⣄⣸⣿⣿⣿⣿⣦⢻⣿⣿⣿⣿⣿⣿⣿⡓⠎⠻⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⠸⣿⣿⣿⣿⡇⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣄⢻⣿⣿⣿⣿⡸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⢀⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⠈⣿⣿⣿⣿⣷⢙⠿⣿⣿⣿⣿⣿⣿⣿⠿⣟⣩⣴⣷⣌⠻⣿⣿⣿⣿⣿⣿⡟⢠⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣆⢻⣿⣿⣿⣿⡇⣷⣶⣭⣭⣭⣵⣶⣾⣿⣿⣿⣿⣿⣿⣷⣌⠹⢿⣿⡿⢋⣠⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⡚⣿⣿⣿⣿⡇⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⢀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⡇⢻⣿⣿⣿⡇⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣻⣿⣿⣷⠈⣿⣿⣿⣿⢆⠀⢋⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣿⣿⣤⡘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⠀⣻⣿⣿⣿⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣎⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⣒⣻⣿⣿⢏⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⢻⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⣇⢹⣿⡏⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣬⡻⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⣿⡄⠻⢱⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣝⢎⢻⣿⣿⣿")
+print("⣿⣿⣿⣿⣿⣷⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⣿⣿⣾⣦⢻⣿⣿")
+print("⣿⣿⣿⣿⣿⡇⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣼⣿⣿⣿⣿⣆⢻⣿")
+print("⣿⣿⣿⣿⡿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣮⡙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣰⣿⣿⣿⣿⣿⣿⣆⣿")
+print("⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⢿⣿⣿⣿⣿⣿⣿⣿⢡⣿⣿⣿⣿⣿⣿⣿⣿⡌")
+print("⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⢿⣿⣿⣿⣿⡿⢸⣿⣿⣿⣿⣿⣿⣿⣿⡇")
+print("⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⢻⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷")
+print("⣿⣿⣿⣿⣧⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⢹⡿⠁⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⣿⡌⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⢰⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⣿⣷⡘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡌⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+
+os.exit()
+end
+
+function rs() 
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("3;81;20:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("3", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("25", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+end
+
+function dg()
+gg.alert('DESKRIPSI SCRIPT DUGEONnPergi ke elmo di galleria capital dan pilih mision Minotaur\npilih mode normal dan cari angka 1 lalu pilih mode hard dan murni kan menjadi 10  jika selesai di edit kalian langsung masuk salon (tanpa frezz)NPC\n\nblacksmith search 1 pergi unhappy man murnikan78\n29 g1 shop\n50 sai 4*\n51 La release\n52 festival fan\n53 latent abi\n55 AoT =1044\n58 hello kity\n60-64,83 legit furnis\n65 e.shadow\n66 chocolate furni\n68 fish expan\n70 Cursed weap\n71 Dispel 5\n72 Obsidian=1327 \n73 haloween furni n ava\n74 snowman\n76 choco furnis\n84 schoolgirl furni\n87 starry sky wall furnis\n97 mw3 ava\n98 halloween\n99 str main int sub neck hp\n100 dex head cri body hp leg 1171 bot best pick\n101 cridmg sub men 1387\n102 dex main,def,mpr 1407\n103 hp body, gold furnis 1487\n104 roar mdef int ear 1492\n105 cri head ,matk ring 1497\n106 str sub,vit lower, def ring 1578\n107 snowman\n108 snowalls,veteran abi=1586\n109sweet furnis\n110 demist\n111 blue jp furni\n\nDungeons\n\n480ancient tower\n570 ebisu kagura\n890 alert area\n930 headway fort mime\n960 hidden cradle\n1050 library of insanity\n1109 haya\n1287 95 regilis\n1236 large ring tower\n1299 mitera\n752 tasogarep\n430 northern cape\n1360 matia cosmos\n1410 awekening quest dungeon\n1546 trex\n1606 nk hard 1625 nk expert\n\nGATES\n\n1316 g4\n1320 g5\n1420 g6\n1562 g7\n1650 g8\n\nJP DUNGEONS\n\n750 silver world\n860 nightmare world\n1044 titan expert 4*\n1136 yelow cloth piece\n1142 secret hideout\n1159 relier hard\n1171 relier maze hyumo,tiger rock\n1256 hulk n schoolgirl\n1258 seagod book/green crystal\n1265 EXP TAURUS\n1268 holy worl,holy abi\n1270 dark world\n1274 foxgirl,jp leafs\n1327 Dark Obsidian\n1331 orange pumpkin\n1328 pumpkin blu\n1330 pumpkin green\n1331 pumpkin orange\n1376 blue/red crystal\n1387 Dragon fosil\n1397 souqs mucus\n1407 Onyx\n1411 discipline world, exp mission\n1428 school girl / hearts\n1487 taurus\n1492 maze of famine\n1493 fox,silver coin of hapiness\n1497 tailwind,crystal of storm\n1502 schoolgirl\n1567 nightmare\n1573 pumpkin\n1574 large e.shadow leaf\n1578 79 latent\n1586 proof of victory')
+end
+
+function TPP()
+MTPP = gg.multiChoice({
+"🔙❌【GUILD MISION】❌🔙",
+
+"📁DEN OF NO RETURN",
+
+"📁FORES MANA POLL",
+
+"📁PREA PDIP",
+
+"📁OGRE",
+
+"📁AVES",
+
+"📁 Night Mare",
+
+
+"🔙❌【EXIT】❌🔙",
+
+}, nil,"⏩⏩ SCRIPT VIP VELLIX_AO⏪⏪\nVELLIX_AO Aurcus Online\n🇮🇩 Aurcus 3.1.11 GLOBAL🇮🇩")
+if MTPP == nil then else
+if MTPP[1] == true then TPP() end
+if MTPP[2] == true then ggtp1() end
+if MTPP[3] == true then ggtp2() end
+if MTPP[4] == true then ggtp3() end
+if MTPP[5] == true then ggtp4() end
+if MTPP[6] == true then ggtp5() end
+if MTPP[7] == true then ggtp6() end
+if MTPP[8] == true then HOME() end
+ end
+end
+
+function ggtp1()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("159;1;1077936128;1008981770;33554689;1054:33", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(4, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-2", gg.TYPE_DWORD)
+gg.clearResults()
+end
+
+function ggtp2()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("129;1;1077936128;1008981770;50331905;1550:33", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-2", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.searchNumber("129;1;1077936128;1008981770;16777473;1550:33", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-2", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.searchNumber("129;1;1082549862;1008981770;33554689;1550:33", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-2", gg.TYPE_DWORD)
+
+gg.clearResults()
+end
+
+function ggtp3()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("717;1;1080033280;1008981770;1061997773;1069547520;1073741824;33620225:29", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-2", gg.TYPE_DWORD)
+gg.clearResults()
+end
+
+function ggtp4()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("657;1;1075838976;1008981770;16777473;2565:33", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-2", gg.TYPE_DWORD)
+gg.clearResults()
+end
+
+function ggtp5()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("258;1;2.0F;1008981770;1.5F;67109121;1806:33", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("1008981770", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-2", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+end
+
+function ggtp6()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.alert("©PROSES")
+end
+
+function TP()
+MTP = gg.multiChoice({
+"🔙❌【TELEPORT】❌🔙",
+
+"EVEHOME 🔍",
+
+"DEV FAST DROPT 🔍",
+
+"DEV RESET SKILL DROPT KEY 🔍",
+
+"FARM BOSST EXP TO GET KEY 🔍",
+
+"SETTA 🔍",
+
+" Night Kingdom 🔍",
+
+" Stardust 🔍",
+
+" Summer beach 🔍",  
+
+"🔙❌【EXIT】❌🔙",
+
+}, nil,"⏩⏩SCRIPT VIP VELLIX_AO⏪⏪\nVELLIX_AO Aurcus Online\n🇮🇩 Aurcus 3.1.11 GLOBAL🇮🇩")
+if MTP == nil then else
+if MTP[1] == true then LOBYM() end
+if MTP[2] == true then tp1() end
+if MTP[3] == true then tp2() end
+if MTP[4] == true then tp3() end
+if MTP[5] == true then tp4() end
+if MTP[6] == true then tp5() end
+if MTP[7] == true then tp6() end
+if MTP[8] == true then tp7() end
+if MTP[9] == true then tp8() end
+if MTP[10] == true then HOME() end
+ end
+end
+
+function tp1()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("404;1~3;255:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("404", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_DWORD then
+		v.value = "1201"
+		v.freeze = true
+	end
+end
+gg.addListItems(t)
+t = nil
+
+
+gg.sleep(2000)
+gg.clearList()
+end
+
+function tp2()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("404;1~3;255:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("404", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_DWORD then
+		v.value = "39"
+		v.freeze = true
+	end
+end
+gg.addListItems(t)
+t = nil
+
+
+gg.sleep(2000)
+gg.clearList()
+end
+
+function tp3()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("404;1~3;255:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("404", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_DWORD then
+		v.value = "1"
+		v.freeze = true
+	end
+end
+gg.addListItems(t)
+t = nil
+
+
+gg.sleep(2000)
+gg.clearList()
+end
+
+function tp4()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("404;1~3;255:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("404", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_DWORD then
+		v.value = "1146"
+		v.freeze = true
+	end
+end
+gg.addListItems(t)
+t = nil
+
+
+gg.sleep(2000)
+gg.clearList()
+end
+
+function tp5()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("404;1~3;255:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("404", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_DWORD then
+		v.value = "1107"
+		v.freeze = true
+	end
+end
+gg.addListItems(t)
+t = nil
+
+
+gg.sleep(2000)
+gg.clearList()
+end
+
+function tp6()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("404;1~3;255:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("404", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_DWORD then
+		v.value = "1166"
+		v.freeze = true
+	end
+end
+gg.addListItems(t)
+t = nil
+
+
+gg.sleep(2000)
+gg.clearList()
+end
+
+function tp7()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("404;1~3;255:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("404", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_DWORD then
+		v.value = "1156"
+		v.freeze = true
+	end
+end
+gg.addListItems(t)
+t = nil
+
+
+gg.sleep(2000)
+gg.clearList()
+end
+
+function tp8()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("404;1~3;255:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("404", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_DWORD then
+		v.value = "286"
+		v.freeze = true
+	end
+end
+gg.addListItems(t)
+t = nil
+
+
+gg.sleep(2000)
+gg.clearList()
+end
+
+function GAMEZ()
+askb = gg.choice({
+"🔙❌【SKILL FARM CEWEK】❌🔙",
+
+                "📒SKILL PASIR",
+
+               "📒 SKILL BUFF LIGHT ",
+               
+               "📒SKILL BUF FIGHT ",
+
+               "📒SKILL WIGS",
+
+               "📒BONUS",
+
+         "🔙❌【EXIT】❌🔙",
+
+}, nil,"⏩⏩SCRIPT VIP VELLIX_AO⏪⏪\nVELLIX_AO Aurcus Online\n🇮🇩 Aurcus 3.1.11 GLOBAL🇮🇩")
+if askb == nil then else
+if askb == 1then askb() end
+if askb == 2 then gsb1() end
+if askb == 3 then gsb2() end
+if askb == 4 then gsb3() end
+if askb == 5 then gsb4() end
+if askb == 6 then gsb5() end
+if askb == 7 then HOME() end
+end
+end
+
+function gsb1()
+gg.clearResults()
+gg.setVisible(false)
+gg.searchNumber("25769803776Q;6;200;0;1.0F:105", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineAddress("4", -1, gg.TYPE_DWORD, gg.SIGN_EQUAL, 0, -1, 0)
+gt= gg.getResults (1)
+local Ll0_3 = {}
+         Ll0_3 = {}
+    Ll0_3[1] = {}
+    Ll0_3[1].address = gt[1].address + 48
+    Ll0_3[1].flags = gg.TYPE_DWORD
+    Ll0_3[1].value = "10077"
+    Ll0_3[1].freeze = true
+    gg.setValues(Ll0_3)
+    gg.addListItems(Ll0_3)
+end
+
+function gsb2()
+gg.clearResults()
+gg.setVisible(false)
+gg.searchNumber("25769803776Q;6;200;0;1.0F:105", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineAddress("4", -1, gg.TYPE_DWORD, gg.SIGN_EQUAL, 0, -1, 0)
+gt1 = gg.getResults (1)
+local Ll0_4 = {}
+         Ll0_4 = {}
+    Ll0_4[1] = {}
+    Ll0_4[1].address = gt1[1].address + 48
+    Ll0_4[1].flags = gg.TYPE_DWORD
+    Ll0_4[1].value = "10083"
+    Ll0_4[1].freeze = true
+    gg.setValues(Ll0_4)
+    gg.addListItems(Ll0_4)
+end
+
+function gsb3()
+gg.clearResults()
+gg.setVisible(false)
+gg.searchNumber("25769803776Q;6;200;0;1.0F:105", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineAddress("4", -1, gg.TYPE_DWORD, gg.SIGN_EQUAL, 0, -1, 0)
+gt = gg.getResults (1)
+local Ll0_5 = {}
+         Ll0_5 = {}
+    Ll0_5[1] = {}
+    Ll0_5[1].address = gt[1].address + 48
+    Ll0_5[1].flags = gg.TYPE_DWORD
+    Ll0_5[1].value = "10084"
+    Ll0_5[1].freeze = true
+    gg.setValues(Ll0_5)
+    gg.addListItems(Ll0_5)
+end
+
+function gsb4()
+gg.clearResults()
+gg.setVisible(false)
+gg.searchNumber("25769803776Q;6;200;0;1.0F:105", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineAddress("4", -1, gg.TYPE_DWORD, gg.SIGN_EQUAL, 0, -1, 0)
+gt = gg.getResults (1)
+local Ll0_6 = {}
+         Ll0_6 = {}
+    Ll0_6[1] = {}
+    Ll0_6[1].address = gt[1].address + 48
+    Ll0_6[1].flags = gg.TYPE_DWORD
+    Ll0_6[1].value = "10071"
+    Ll0_6[1].freeze = true
+    gg.setValues(Ll0_6)
+    gg.addListItems(Ll0_6)
+end
+
+function gsb5()
+gg.clearResults()
+gg.setVisible(false)
+gg.searchNumber("25769803776Q;6;200;0;1.0F:105", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineAddress("4", -1, gg.TYPE_DWORD, gg.SIGN_EQUAL, 0, -1, 0)
+gt= gg.getResults (1)
+local Ll0_7 = {}
+         Ll0_7 = {}
+    Ll0_7[1] = {}
+    Ll0_7[1].address = gt[1].address + 48
+    Ll0_7[1].flags = gg.TYPE_DWORD
+    Ll0_7[1].value = "11305"
+    Ll0_7[1].freeze = true
+    gg.setValues(Ll0_7)
+    gg.addListItems(Ll0_7)
+end
+
+function GAMEEM()
+askk1b = gg.choice({
+"🔙❌【SKILL FARM COWOK】❌🔙",
+
+                "📒SKILL PASIR",
+
+               "📒 SKILL BUFF LIGHT ",
+               
+               "📒SKILL BUF FIGHT ",
+
+               "📒SKILL WIGS",
+
+               "📒BONUS",
+
+         "🔙❌【EXIT】❌🔙",
+
+}, nil,"⏩⏩SCRIPT VIP VELLIX_AO⏪⏪\nVELLIX_AO Aurcus Online\n🇮🇩 Aurcus 3.1.11 GLOBAL🇮🇩")
+if askk1b == nil then else
+if askk1b == 1then askk1b() end
+if askk1b == 2 then gsbbt1() end
+if askk1b == 3 then gsbbt2() end
+if askk1b == 4 then gsbbt3() end
+if askk1b == 5 then gsbbt4() end
+if askk1b == 6 then gsbbt5() end
+if askk1b == 7 then HOME() end
+end
+end
+
+function gsbbt1()
+gg.clearResults()
+gg.setVisible(false)
+gg.searchNumber("25769803776Q;6;200;0;1.0F:105", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineAddress("4", -1, gg.TYPE_DWORD, gg.SIGN_EQUAL, 0, -1, 0)
+gtv= gg.getResults (1)
+local Ll0__3 = {}
+         Ll0__3 = {}
+    Ll0__3[1] = {}
+    Ll0__3[1].address = gtv[1].address + 48
+    Ll0__3[1].flags = gg.TYPE_DWORD
+    Ll0__3[1].value = "10078"
+    Ll0__3[1].freeze = true
+    gg.setValues(Ll0__3)
+    gg.addListItems(Ll0__3)
+end
+
+function gsbbt2()
+gg.clearResults()
+gg.setVisible(false)
+gg.searchNumber("25769803776Q;6;200;0;1.0F:105", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineAddress("4", -1, gg.TYPE_DWORD, gg.SIGN_EQUAL, 0, -1, 0)
+gtv1 = gg.getResults (1)
+local Ll0__4 = {}
+         Ll0__4 = {}
+    Ll0__4[1] = {}
+    Ll0__4[1].address = gtv1[1].address + 48
+    Ll0__4[1].flags = gg.TYPE_DWORD
+    Ll0__4[1].value = "10084"
+    Ll0__4[1].freeze = true
+    gg.setValues(Ll0__4)
+    gg.addListItems(Ll0__4)
+end
+
+function gsbbt3()
+gg.clearResults()
+gg.setVisible(false)
+gg.searchNumber("25769803776Q;6;200;0;1.0F:105", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineAddress("4", -1, gg.TYPE_DWORD, gg.SIGN_EQUAL, 0, -1, 0)
+gtv = gg.getResults (1)
+local Ll0__5 = {}
+         Ll0__5 = {}
+    Ll0__5[1] = {}
+    Ll0__5[1].address = gtv[1].address + 48
+    Ll0__5[1].flags = gg.TYPE_DWORD
+    Ll0__5[1].value = "10085"
+    Ll0__5[1].freeze = true
+    gg.setValues(Ll0__5)
+    gg.addListItems(Ll0__5)
+end
+
+function gsbbt4()
+gg.clearResults()
+gg.setVisible(false)
+gg.searchNumber("25769803776Q;6;200;0;1.0F:105", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineAddress("4", -1, gg.TYPE_DWORD, gg.SIGN_EQUAL, 0, -1, 0)
+gtv = gg.getResults (1)
+local Ll0__6 = {}
+         Ll0__6 = {}
+    Ll0__6[1] = {}
+    Ll0__6[1].address = gtv[1].address + 48
+    Ll0__6[1].flags = gg.TYPE_DWORD
+    Ll0__6[1].value = "10072"
+    Ll0__6[1].freeze = true
+    gg.setValues(Ll0__6)
+    gg.addListItems(Ll0__6)
+end
+
+function gsbbt5()
+gg.clearResults()
+gg.setVisible(false)
+gg.searchNumber("25769803776Q;6;200;0;1.0F:105", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineAddress("4", -1, gg.TYPE_DWORD, gg.SIGN_EQUAL, 0, -1, 0)
+gtv= gg.getResults (1)
+local Ll0__7 = {}
+         Ll0__7 = {}
+    Ll0__7[1] = {}
+    Ll0__7[1].address = gtv[1].address + 48
+    Ll0__7[1].flags = gg.TYPE_DWORD
+    Ll0__7[1].value = "11306"
+    Ll0__7[1].freeze = true
+    gg.setValues(Ll0__7)
+    gg.addListItems(Ll0__7)
+end
+
+function dev()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("404;1~3;255:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("404", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_DWORD then
+		v.value = "1166"
+		v.freeze = true
+	end
+end
+gg.addListItems(t)
+t = nil
+
+gg.sleep(2000)
+gg.clearList()
+end
+
+function crt()
+gg.clearResults()
+gg.setVisible(false)
+
+gg.processResume()
+gg.searchNumber("3;81;20:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("3", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("25", gg.TYPE_DWORD)
+gg.searchNumber("25769803776Q;6D;858993459200Q;200D;4575657221408423936Q;1.0F:105", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineAddress("4", -1, gg.TYPE_DWORD, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.searchNumber("50;50;300~400;300~400;1:53", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("1100001F;11524;16:97", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("1F;11524;16:97", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineAddress("C", -1, gg.TYPE_DWORD, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("11524", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("11001", gg.TYPE_DWORD)
+gg.processResume()
+gg.clearResults()
+gg.searchNumber("1F;11522;16:97", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineAddress("C", -1, gg.TYPE_DWORD, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("11522", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("10308", gg.TYPE_DWORD)
+gg.processResume()
+gg.clearResults()
+gg.searchNumber("1F;10081~10082;16", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineAddress("C", -1, gg.TYPE_DWORD, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("10081~10082", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("10290", gg.TYPE_DWORD)
+gg.clearResults()
+end
+
+function bag()
+nbag = gg.multiChoice({
+"🔙❌【AGUS SEDIH】❌🔙",
+
+                "📁  STORAGE",
+
+               "📁  MARKET",
+               
+         "🔙❌【EXIT】❌🔙",
+
+}, nil,"⏩⏩SCRIPT VIP VELLIX_AO⏪⏪\nVELLIX_AO Aurcus Online\n🇮🇩 Aurcus 3.2.0 GLOBAL🇮🇩")
+if nbag == nil then else
+if nbag[1] == true then ale() end
+if nbag[2] == true then BG() end
+if nbag[3] == true then BM() end
+if nbag[4] == true then HOME() end
+end
+end
+
+function BG()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("-1;2;-1:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.toast("BUKA ENCHANTMENT")
+gg.sleep(5000)
+gg.refineNumber("-1;59;-1:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("59", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+rv = gg.getResults (1)
+local v0_0 = {}
+         v0_0 = {}
+    v0_0[1] = {}
+    v0_0[1].address = rv[1].address + 4
+    v0_0[1].flags = gg.TYPE_DWORD
+    v0_0[1].value = "12"
+    v0_0[1].freeze = false
+    gg.setValues(v0_0)
+    end
+    
+ function BM()
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("-1;2;-1:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.toast("BUKA ENCHANTMENT")
+gg.sleep(5000)
+gg.refineNumber("-1;59;-1:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("59", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+rTv = gg.getResults (1)
+local Tv0_0 = {}
+         Tv0_0 = {}
+    Tv0_0[1] = {}
+    Tv0_0[1].address = rTv[1].address + 4
+    Tv0_0[1].flags = gg.TYPE_DWORD
+    Tv0_0[1].value = "27"
+    Tv0_0[1].freeze = false
+    gg.setValues(Tv0_0)
+    end
+    
+    function qttp()
+qsbs = gg.multiChoice({
+"🔙❌【QUEST BONUS】❌🔙",
+
+                "📒SKIP SETTA",
+                
+                "📒SKIP EVEHOME",
+                
+                "📒AMBIL WATHER SHOT",
+                
+                "📖AMBIL TONGKAT KAYU",
+                
+         "🔙❌【EXIT】❌🔙",
+
+}, nil,"⏩⏩SCRIPT VIP VELLIX_AO⏪⏪\nVELLIX_AO Aurcus Online\n🇮🇩 Aurcus 3.1.11 GLOBAL🇮🇩")
+if qsbs == nil then else
+if qsbs[1] == true then qsbs() end
+if qsbs[2] == true then qsb1() end
+if qsbs[3] == true then qsb2() end
+if qsbs[4] == true then qsb3() end
+if qsbs[5] == true then qsb4() end
+if qsbs[6] == true then HOME() end
+end
+end
+    
+    
+    function qsb1()
+    gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("964;2;1:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("964", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1143", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+    end
+    
+   function qsb2()
+   gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("964;2;1:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("964", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1201", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+   end
+   
+   function qsb3()
+   gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("964;2;1:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("964", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1185", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+   end
+   
+   function qsb4()
+   gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("964;2;1:9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("964", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("961", gg.TYPE_DWORD)
+
+gg.clearResults()
+gg.processResume()
+   end
+    
+ else
+gg.setVisible(false)
+gg.alert("❌Not Script To Game❌")
+os.exit()
+end
+while true do
+  if gg.isVisible(true) then
+  HOMEDM = 1
+  gg.setVisible(false)
+  end
+  gg.clearResults()
+  if HOMEDM == 1 then
+  HOME()
+ end
+end
