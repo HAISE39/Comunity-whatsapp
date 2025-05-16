@@ -1,0 +1,348 @@
+while pcall(load("os.exit()")) or not tostring(os.exit):find("gg%.exit") do  end 
+local GG = {gg.searchNumber,gg.editAll,gg.refineNumber}
+local hook = GG[1] function gg.searchNumber(...)return hook(table.unpack({...}))end 
+local hook = GG[2] function gg.editAll(...)return hook(table.unpack({...}))end 
+local hook = GG[3] function gg.refineNumber(...)return hook(table.unpack({...}))end 
+for k,v in ipairs(GG) do
+while v ~= debug.getinfo(v).func do 
+gg.alert("Mo ngapain?")
+end 
+end
+
+local wo,wc = debug.traceback(),debug.traceback()
+local check = {"lua","txt"}
+for i in ipairs(check) do
+if string.len(wo) >= 125 then 
+wo = wo:gsub(gg.getFile(),"")
+if string.find(wo,"/[^\n]/[^\n]."..check[i]..":[^\n]") == nil then 
+if string.find(wo,"."..check[i].."[^\n]."..check[i].."") ~= nil then
+while true do os.exit() end
+end 
+else 
+while true do gg.alert(string.char(0x4C,0x6F,0x61,0x64,0x66,0x69,0x6C,0x65,0x20,0x3F)) os.exit()end
+end
+end
+end
+local function Antilasm(data) -- dump anti-lasm
+local error = "\108\111\99\97\108\32\95\95\32\61\32\34\89\117\104\34"
+local spam = (error.."\n")
+data = string.dump(load(data:gsub("function %w+%(%)", function (...)
+return ({...})[1].."\n" .. spam:rep(math.random(1,10)) .. "\n"
+end)), true, false)
+return data:gsub("\4\4\0\0\0\89\117\104","\4\0\0\0")
+end
+local Boolean
+for i = 1, 5 do
+    local file = loadfile(gg.getFile())
+    local func = debug.getinfo(i)
+    if (i == 1 and func['what'] ~= 'Java' and func['source'] ~= '=[Java]') or (i == 2 and func['what'] ~= 'Lua' and not string.match(func['source'], '@')) then
+        Boolean = true
+    end
+    if func then
+        local bug_1 = debug.getinfo(1)
+        local bug_2 = debug.getinfo(debug.getinfo)
+        if bug_1.func ~= bug_2.func then
+            return gg.processKill(true)
+        end
+    end
+    if Boolean then
+        while true do gg.choice({"Hook : " .. i}) end
+        return os.exit(1)
+    end
+end
+-- Anti bypass : string.match ; string.find ; tostring ; string.gmatch
+local checkanti = "@storage";local _0x003;local _0x002;local _0x001;_0x002 = 1000;if not string.match(checkanti, "@") or not string.find(checkanti, "@") or tostring(checkanti) ~= "@storage" then _0x001 = true end;if _0x001 then os.exit() _0x002 = 6677 end;while ((_0x002==6677) and _0x001) do gg.alert("Log cc") ;end 
+local yhsk1,yhsk2 = {},{};function a1()end;function a2()end
+for ii,ll in tostring(_ENV):gmatch("%['a(%d+)'%]([^\n]+),") do
+table.insert(yhsk1,ii) ; table.insert(yhsk2,ll)end
+local checki = table.concat(yhsk2):gsub("@","1123",1):gsub("@","1435")
+if tonumber(table.concat(yhsk1)) ~= 12 and not checki:find("1123") and not checki:find("1435") then
+return gg.alert("GA USAH GOBLOK BANG")
+end
+if os.date("%Y%m%d") > "20250620" then
+gg.setVisible(false)
+gameguardianph=gg.alert("❌Script Expired❌\nBeli Vip Script : 6285706400133")
+os.exit()
+end
+T = gg.getTargetPackage ()
+if T == "com.asobimo.aurcusonline.ww" then
+else
+gg.setVisible(false)
+gg.alert("❌Not Script To Game❌")
+os.exit()
+end
+gg.setVisible(false)
+modbyfami = os.date ('           ⚡MODMENU BY VELLIX⚡\
+\
+           ❦ ════ •⊰❂ - ❂⊱• ════ ❦\
+\
+📆Dᴀᴛᴇ📆 : %Y/%m/%d\
+\
+🕛Tɪᴍᴇ🕛 : %H:%M:%S\
+\
+⏳Exᴘɪʀᴇᴅ Sᴄʀɪᴘᴛ⏳ : 0000/00/00\
+\
+           ❦ ════ •⊰❂ - ❂⊱• ════ ❦')
+gg.alert(modbyfami)
+gg.setVisible(true)
+
+gg.setVisible(false)
+gg.alert("©Hack\n©YouTube : VELLIX_AO\n©Fb: Kurol watu\n©Subscribe Channel Free")
+
+gg.toast("▓▒▒▒▒▒▒▒▒▒10%")
+gg.sleep(100)
+gg.toast("▓▓▒▒▒▒▒▒▒▒20%")
+gg.sleep(100)
+gg.toast("▓▓▓▒▒▒▒▒▒▒30%")
+gg.sleep(100)
+gg.toast("▓▓▓▓▒▒▒▒▒▒40%")
+gg.processResume()
+gg.toast("▓▓▓▓▓▒▒▒▒▒50%")
+gg.sleep(100)
+gg.toast("▓▓▓▓▓▓▒▒▒▒60%")
+gg.processResume()
+gg.sleep(100)
+gg.toast("▓▓▓▓▓▓▓▒▒▒70%")
+gg.sleep(100)
+gg.toast("▓▓▓▓▓▓▓▓▒▒80%")
+gg.sleep(100)
+gg.toast("▓▓▓▓▓▓▓▓▓▒90%")
+gg.sleep(100)
+gg.toast("▓▓▓▓▓▓▓▓▓▓100%")
+gg.sleep(100)
+gg.toast("log sukses✔️")
+
+running = true
+TEMPLATE = 1
+
+ON = "    ⃢🔵🔸"
+OFF = "🔴⃢    🔸"
+switch1 = OFF
+switch2 = OFF
+switch3 = OFF
+switch4 = OFF
+
+function HOME()
+gg.setVisible(false)
+HOMEMENU = gg.choice({
+"____BASIC JOB____",
+
+switch1.."📁 Swords",
+
+switch2.."📁 Archer ",
+
+switch3.."📁 Mage ",
+
+switch4.."📁 Tank",
+
+"🔚【EXIT】🔚",
+
+}, nil,os.date("⏩⏩SCRIPT FREE VELLIX⏪⏪\n📆 Date: %A, %B %d %Y\n⏲️ Time: %I:%M %p\nVELLIX_AO Aurcus Online\n🇮🇩 Aurcus 3.2.1 GLOBAL🇮🇩"))
+if HOMEMENU == 1 then HOME()
+ end
+if HOMEMENU == 2 then sw()
+ end
+if HOMEMENU == 3 then ar()
+ end
+ if HOMEMENU == 4 then mg()
+ end
+ if HOMEMENU == 5 then pl()
+end
+if HOMEMENU == 6 then Exit()
+ end
+TEMPLATE = -1
+end
+
+function sw()
+if switch1 == OFF then
+gg.sleep(200)
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("h 03 00 00 00 1E 00 00 00 01 00 00 00 02 00 00 00", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("30", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+r = gg.getResults (1)
+local L0_0 = {}
+         L0_0 = {}
+    L0_0[1] = {}
+    L0_0[1].address = r[1].address + 24
+    L0_0[1].flags = gg.TYPE_DWORD
+    L0_0[1].value = "h 7F 96 98 00"
+    L0_0[1].freeze = false
+    L0_0[2] = {}
+    L0_0[2].address = r[1].address + 28
+    L0_0[2].flags = gg.TYPE_DWORD
+    L0_0[2].value = "h 7F 96 98 00"
+    L0_0[2].freeze = false
+    gg.setValues(L0_0)
+    gg.addListItems(L0_0)
+    gg.clearResults()
+    gg.clearList()
+switch1 = ON
+gg.toast("sᴡᴏʀᴅ ɪɴᴊᴇᴄᴛ : sᴜᴄᴄᴇss")
+else
+gg.alert("⚠️sᴡᴏʀᴅ ɪɴᴊᴇᴄᴛ : ᴅᴇ-ᴀᴄᴛɪᴠᴇᴅ!")
+switch1 = ON
+end
+end
+
+function ar() 
+if switch2 == OFF then
+gg.sleep(200)
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("h 07 00 00 00 22 00 00 00 01 00 00 00 04 00 00 00", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("34", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+r1 = gg.getResults (1)
+local L1_0 = {}
+         L1_0 = {}
+    L1_0[1] = {}
+    L1_0[1].address = r1[1].address + 24
+    L1_0[1].flags = gg.TYPE_DWORD
+    L1_0[1].value = "h 7F 96 98 00"
+    L1_0[1].freeze = false
+    L1_0[2] = {}
+    L1_0[2].address = r1[1].address + 28
+    L1_0[2].flags = gg.TYPE_DWORD
+    L1_0[2].value = "h 7F 96 98 00"
+    L1_0[2].freeze = false
+    gg.setValues(L1_0)
+    gg.addListItems(L1_0)
+    gg.clearResults()
+    gg.clearList()
+switch2 = ON
+gg.toast("ᴀʀᴄʜᴇʀ ɪɴᴊᴇᴄᴛ : sᴜᴄᴄᴇss")
+else
+gg.alert("⚠️ᴀʀᴄʜᴇʀ ɪɴᴊᴇᴄᴛ : ᴅᴇ-ᴀᴄᴛɪᴠᴇᴅ!")
+switch2 = ON
+end
+end
+
+function mg() 
+if switch3 == OFF then
+gg.sleep(200)
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("h05000000200000000100000003000000", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("32", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+r2 = gg.getResults (1)
+local L2_0 = {}
+         L2_0 = {}
+    L2_0[1] = {}
+    L2_0[1].address = r2[1].address + 24
+    L2_0[1].flags = gg.TYPE_DWORD
+    L2_0[1].value = "h 7F 96 98 00"
+    L2_0[1].freeze = false
+    L2_0[2] = {}
+    L2_0[2].address = r2[1].address + 28
+    L2_0[2].flags = gg.TYPE_DWORD
+    L2_0[2].value = "h 7F 96 98 00"
+    L2_0[2].freeze = false
+    gg.setValues(L2_0)
+    gg.addListItems(L2_0)
+    gg.clearResults()
+    gg.clearList()
+switch3 = ON
+gg.toast("ᴍᴀɢᴇ ɪɴᴊᴇᴄᴛ : sᴜᴄᴄᴇss")
+else
+gg.alert("⚠️ᴍᴀɢᴇ ɪɴᴊᴇᴄᴛ : ᴅᴇ-ᴀᴄᴛɪᴠᴇᴅ!")
+switch3 = ON
+end
+end
+
+function pl() 
+if switch4 == OFF then
+gg.sleep(200)
+gg.clearResults()
+gg.setVisible(false)
+gg.setRanges(gg.REGION_JAVA_HEAP)
+gg.searchNumber("h 01 00 00 00 1C 00 00 00 01 00 00 00 01 00 00 00", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("28", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+r3 = gg.getResults (1)
+local L3_0 = {}
+         L3_0 = {}
+    L3_0[1] = {}
+    L3_0[1].address = r3[1].address + 24
+    L3_0[1].flags = gg.TYPE_DWORD
+    L3_0[1].value = "h 7F 96 98 00"
+    L3_0[1].freeze = false
+    L3_0[2] = {}
+    L3_0[2].address = r3[1].address + 28
+    L3_0[2].flags = gg.TYPE_DWORD
+    L3_0[2].value = "h 7F 96 98 00"
+    L3_0[2].freeze = false
+    gg.setValues(L3_0)
+    gg.addListItems(L3_0)
+    gg.clearResults()
+gg.clearList()
+switch4 = ON
+gg.toast("ᴀʀᴄʜᴇʀ ɪɴᴊᴇᴄᴛ : sᴜᴄᴄᴇss")
+else
+gg.alert("⚠️ᴀʀᴄʜᴇʀ ɪɴᴊᴇᴄᴛ : ᴅᴇ-ᴀᴄᴛɪᴠᴇᴅ!")
+switch4 = ON
+end
+end
+
+function Exit()
+print("⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⢛⡛⠿⠛⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⣿⣿⣿⡿⠟⡉⣡⡖⠘⢗⣀⣀⡀⢢⣐⣤⣉⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⣿⡿⠉⣠⣲⣾⡭⣀⢟⣩⣶⣶⡦⠈⣿⣿⣿⣷⣖⠍⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⡛⢀⠚⢩⠍⠀⠀⠡⠾⠿⣋⡥⠀⣤⠈⢷⠹⣿⣎⢳⣶⡘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⡏⢀⡤⠉⠀⠀⠀⣴⠆⠠⠾⠋⠁⣼⡿⢰⣸⣇⢿⣿⡎⣿⡷⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⠀⢸⢧⠁⠀⠀⢸⠇⢐⣂⣠⡴⠶⣮⢡⣿⢃⡟⡘⣿⣿⢸⣷⡀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣯⢀⡏⡾⢠⣿⣶⠏⣦⢀⠈⠉⡙⢻⡏⣾⡏⣼⠇⢳⣿⡇⣼⡿⡁⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⠈⡇⡇⡘⢏⡃⠀⢿⣶⣿⣷⣿⣿⣿⡘⡸⠇⠌⣾⢏⡼⣿⠇⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⡀⠀⢇⠃⢢⡙⣜⣾⣿⣿⣿⣿⣿⣿⣧⣦⣄⡚⣡⡾⣣⠏⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣷⡀⡀⠃⠸⣧⠘⢿⣿⣿⣿⣿⣿⣻⣿⣿⣿⣿⠃⠘⠁⢈⣤⡀⣬⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⣇⣅⠀⠀⠸⠀⣦⡙⢿⣿⣿⣿⣿⣿⣿⡿⠃⢀⣴⣿⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⡿⢛⣉⣉⣀⡀⠀⢸⣿⣿⣷⣬⣛⠛⢛⣩⣵⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⢋⣴⣿⣿⣿⣿⣿⣦⣬⣛⣻⠿⢿⣿⡇⠈⠙⢛⣛⣩⣭⣭⣝⡛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⡇⣼⣿⣿⣿⣿⣿⡿⡹⢿⣿⣽⣭⣭⣭⣄⣙⠻⢿⣿⡿⣝⣛⣛⡻⢆⠙⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⢥⣿⣿⣿⣿⣿⣿⢇⣴⣿⣿⣿⣿⣿⡿⣿⣿⣿⣷⣌⢻⣿⣿⣿⣿⣿⣷⣶⣌⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⡆⣿⣿⣿⣿⣿⡟⣸⣿⡿⣿⣿⣿⣿⣄⣸⣿⣿⣿⣿⣦⢻⣿⣿⣿⣿⣿⣿⣿⡓⠎⠻⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⠸⣿⣿⣿⣿⡇⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣄⢻⣿⣿⣿⣿⡸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⢀⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⠈⣿⣿⣿⣿⣷⢙⠿⣿⣿⣿⣿⣿⣿⣿⠿⣟⣩⣴⣷⣌⠻⣿⣿⣿⣿⣿⣿⡟⢠⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣆⢻⣿⣿⣿⣿⡇⣷⣶⣭⣭⣭⣵⣶⣾⣿⣿⣿⣿⣿⣿⣷⣌⠹⢿⣿⡿⢋⣠⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⡚⣿⣿⣿⣿⡇⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⢀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⡇⢻⣿⣿⣿⡇⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣻⣿⣿⣷⠈⣿⣿⣿⣿⢆⠀⢋⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣿⣿⣤⡘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⠀⣻⣿⣿⣿⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣎⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⣒⣻⣿⣿⢏⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⢻⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⣇⢹⣿⡏⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣬⡻⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⣿⡄⠻⢱⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣝⢎⢻⣿⣿⣿")
+print("⣿⣿⣿⣿⣿⣷⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⣿⣿⣾⣦⢻⣿⣿")
+print("⣿⣿⣿⣿⣿⡇⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣼⣿⣿⣿⣿⣆⢻⣿")
+print("⣿⣿⣿⣿⡿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣮⡙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣰⣿⣿⣿⣿⣿⣿⣆⣿")
+print("⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⢿⣿⣿⣿⣿⣿⣿⣿⢡⣿⣿⣿⣿⣿⣿⣿⣿⡌")
+print("⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⢿⣿⣿⣿⣿⡿⢸⣿⣿⣿⣿⣿⣿⣿⣿⡇")
+print("⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⢻⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷")
+print("⣿⣿⣿⣿⣧⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⢹⡿⠁⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⣿⡌⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⢰⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+print("⣿⣿⣿⣿⣿⣷⡘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡌⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+gg.clearResults()
+gg.clearList()
+os.exit()
+end
+
+while true do
+  if gg.isVisible(true) then
+  TEMPLATE = 1
+  gg.setVisible(false)
+  end
+  gg.clearResults()
+  if TEMPLATE == 1 then
+  HOME()
+  TEMPLATE = -1
+ end
+end
