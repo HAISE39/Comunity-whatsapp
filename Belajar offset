@@ -1,0 +1,258 @@
+gg.setVisible(false)
+modbyfami = os.date ('           ⚡MODMENU BY VELLIX⚡\
+\
+           ❦ ════ •⊰❂ - ❂⊱• ════ ❦\
+\
+📆Dᴀᴛᴇ📆 : %Y/%m/%d\
+\
+🕛Tɪᴍᴇ🕛 : %H:%M:%S\
+\
+⏳Exᴘɪʀᴇᴅ Sᴄʀɪᴘᴛ⏳ : 0000/00/00\
+\
+           ❦ ════ •⊰❂ - ❂⊱• ════ ❦')
+gg.alert(modbyfami)
+gg.setVisible(true)
+
+
+function introduction()
+gg.alert('➣Offset berarti jumlah lokasi alamat yang ditambahkan ke alamat dasar untuk sampai ke alamat tertentu.\n\n➣Misal kita mempunyai alamat A = 00000001 dan alamat lain B = 00000004.\n\n➣Maka offset dari A ke B adalah 3.')
+end
+
+function application()
+gg.alert("①.Cari nomornya\n\n②.Ambil alamatnya(=addorig)\n\n③.Alamat untuk nilai dengan offset 4 di depan nilai pencarian kita=>\nadoff = tambahkan 1 + (4).\n\n④.Sekarang lakukan pencarian alamat untuk alamat baru ini.")
+end
+
+function basic()
+gg.alert('📑Templat akan disalin sekarang, tempel di dokumen baru untuk melakukan perubahan.')
+gg.copyText([[
+-- Hanya untuk 1 hasil pencarian dan 1 alamat offset.
+gg.clearResults()
+gg.searchNumber("1" , gg.TYPE_DWORD) ---nilai pencarian grup Anda / atau nomor pencarian Anda
+gg.refineNumber("1", gg.TYPE_DWORD) -- menyempurnakan nilai yang dicari ke nilai yang diperlukan
+p = gg.getResults(1)                   -- menyimpan hasilnya
+local q = {}
+q[1] = {}
+q[1].address = p[1].address + 4   -- alamat offset (misal: - 4) ke hasil yang disempurnakan
+q[1].flags = 4                -- tipe data yang ingin Anda edit nilainya pada offset (4 = DWORD)
+q[1].value = 999999        -- masukkan nilai edit untuk melakukan peretasan
+gg.setValues(q)  
+gg.alert('Selesai')
+gg.clearResults()
+	]] , false)
+gg.alert('©Disalin')
+end
+
+
+	    
+
+function results()
+gg.alert('📑Templat akan disalin sekarang, tempel di dokumen baru untuk melakukan perubahan.')
+gg.copyText([[ 
+-- Untuk semua hasil pencarian dan 1 alamat offset.
+gg.clearResults()
+gg.searchNumber("1" , gg.TYPE_DWORD) ---nilai pencarian grup Anda / atau nomor pencarian Anda
+gg.refineNumber("1", gg.TYPE_DWORD) -- menyempurnakan nilai yang dicari ke nilai yang diperlukan
+p = gg.getResultCount()                -- menyimpan jumlah hasil
+q = gg.getResults(p)                   -- menyimpan hasilnya
+
+-- menggunakan loop untuk mengedit nilai di offset satu per satu
+
+for i = 1,p do
+          local  r = {}
+			r[i] = {}
+			        r[i].address = q[i].address + 4   -- alamat offset (misal: - 4) ke hasil yang disempurnakan
+				    r[i].flags = 4                 -- tipe data yang ingin Anda edit nilainya pada offset (4 = DWORD)
+					r[i].value = 99999889                -- masukkan nilai edit untuk melakukan peretasan
+gg.setValues(r)
+end
+gg.alert('Selesai')	
+gg.clearResults()
+  ]] , false)
+gg.alert('©Disalin')
+end
+
+
+function offsets()
+gg.alert('📑Templat akan disalin sekarang, tempel di dokumen baru untuk melakukan perubahan.')
+gg.copyText([[ 
+-- Hanya untuk 1 hasil pencarian dan lebih dari 1 alamat offset.
+gg.clearResults()
+r = {"4","8","16"}                      ---- tabel berisi nilai offset yang akan diambil
+gg.searchNumber("1" , gg.TYPE_DWORD) ---nilai pencarian grup Anda / atau nomor pencarian Anda
+gg.refineNumber("1", gg.TYPE_DWORD)  -- menyempurnakan nilai yang dicari ke nilai yang diperlukan
+q = gg.getResults(1)                    -- menyimpan hasilnya
+-- menggunakan loop untuk mengedit nilai pada offset satu per satu
+
+for i = 1,#r do
+            p = {}
+			p[i] = {}
+		    p[i].address = q[1].address + r[i]   -- alamat offset (misal: - 4) ke hasil yang disempurnakan
+			p[i].flags = 4                   -- tipe data yang ingin Anda edit nilainya pada offset (4 = DWORD)
+			p[i].value = 99779999 -- masukkan nilai edit untuk melakukan peretasan
+gg.setValues(p)
+end
+gg.alert('Selesai')	
+gg.clearResults()
+ ]] , false)
+gg.alert('©Disalin')
+end
+
+
+function different ()
+gg.alert('📑Templat akan disalin sekarang, tempel di dokumen baru untuk melakukan perubahan.')
+gg.copyText([[
+-- Untuk lebih dari 1 hasil pencarian dan lebih dari 1 alamat offset.
+gg.clearResults()
+r = {"4","4","20","4"}                      ---- tabel berisi nilai offset yang akan diambil
+gg.searchNumber("1" , gg.TYPE_DWORD) ---nilai pencarian grup Anda / atau nomor pencarian Anda
+gg.refineNumber("1", gg.TYPE_DWORD)  -- menyempurnakan nilai yang dicari ke nilai yang diperlukan
+p = gg.getResultCount()                -- menyimpan jumlah hasil
+q = gg.getResults(p)                   -- menyimpan hasilnya
+
+-- menggunakan loop untuk mengedit nilai pada offset satu per satu
+
+for i = 1,#r do
+            s = {}
+			s[i] = {}
+		    s[i].address = q[i].address + r[i]   -- alamat offset ke hasil yang disempurnakan
+			s[i].flags = 4                   -- tipe data yang ingin Anda edit nilainya pada offset (4 = DWORD)
+			s[i].value = 99779999                -- masukkan nilai edit untuk melakukan peretasan
+gg.setValues(s)
+end
+gg.alert('Selesai')	
+gg.clearResults()
+ ]] , false)
+gg.alert('©Disalin')
+end
+
+function tables()
+gg.alert("⛔Jika Anda tidak memahami dengan benar cara kerja pemanggilan tabel dan fungsi, pelajari terlebih dahulu.⛔")
+gg.alert('📑Templat akan disalin sekarang, tempel di dokumen baru untuk melakukan perubahan.')
+gg.copyText([[
+-- untuk lebih dari 1 hasil pencarian, lebih dari 1 alamat offset, lebih dari 1 tipe data.
+function change(szpy, edit)                                                                        -- berfungsi untuk mengedit nilai di offstes
+for x = 1, #(edit) do                                                                              -- lingkaran (#edit = 2)
+ address = szpy + edit[x]["offset"]                                                                -- alamat baru untuk diedit
+
+type1 = edit[x]["type"]                                                                             -- tipe nilai
+
+value = edit[x]["value"]                                                                            -- edit nilai
+
+ gg.setValues({[1] = {address = address, flags = type1, value = value}})                            -- menetapkan nilai-nilai
+cnt = cnt + 1                                                                                        -- menghitung jumlah nilai yang diedit
+end
+end
+
+
+
+function search(find)                                                                             -- berfungsi untuk pencarian
+gg.clearResults()
+ gg.setRanges(find[1]["memory"])                                                                  -- rentang memori
+gg.searchNumber(find[3]["value"], find[3]["type"])                                                -- mencari
+gg.refineNumber(find[3]["value"], find[3]["type"])  
+sz = gg.getResultCount()  
+sl = gg.getResults(sz)                                                                          -- menyimpan hasil yang ditemukan
+cnt = 0
+for i = 1, sz do                                                                                  -- loop menggunakan penghitungan hasil
+pdsz = true                                                                                       -- simpan variabel untuk mendapatkan nilai alamat terdekat
+for v = 4, #(find) do                                                                             -- loop menggunakan panjang array 
+if pdsz == true                                                                                   -- jika benar
+then 
+pysz = {}                                                                                         -- array variabel untuk menyimpan rentang nilai pada offset
+pysz[1] = {}                                                                                      -- susunan pertama
+ pysz[1].address = sl[i].address + find[v]["offset"]                                              -- alamat akan menjadi alamat hasil pertama + offset
+pysz[1].flags = find[v]["type"]                                                                   -- bendera akan menjadi bendera seperti yang didefinisikan dalam tabel
+szpy = gg.getValues(pysz)                                                                         -- dapatkan nilai untuk daftar item pysz (lihat gg.getValues ​​di gg api)
+end 
+end
+
+szpy = sl[i].address                                                                             -- jika benar maka szpy baru akan menjadi alamat hasil pertama
+change(szpy, edit)                                                                               -- memanggil fungsi perubahan untuk mengedit nilai yang diperlukan 
+xgjg = true
+end
+if xgjg == true                                                                                   -- jika benar maka sukses
+then 
+gg.alert(find[2]["name"] .. "Success✔️, Modified " .. cnt .. " codes")                                -- tanda sukses jika pengeditan berhasil
+else
+gg.alert(find[2]["name"] .. "Failed❌")                                                              -- jika kalian tidak menemukan hasil lainya
+end   
+end
+ 
+
+
+
+
+while true do--(Awal siklus)
+find = {                                                                                          -- nilai untuk pencarian
+{["memory"] = gg.REGION_ANONYMOUS},                                                                   -- rentang memori
+{["name"] = "Menggunakan Offset melalui Tabel 🔢"},
+{["value"] = 1, ["type"] = gg.TYPE_DWORD},                                                       -- nilai dan tipe
+{["offset"] = 12, ["type"] = gg.TYPE_DWORD},                                                      -- offset dan ketik (Anda dapat menulis nilai offset apa pun di sini dan jenis yang diperlukan)
+{["offset"] = 16, ["type"] = gg.TYPE_FLOAT},
+--tambahkan lebih banyak offset jika diperlukan sesuai dengan tipe data yang Anda perlukan
+}
+edit = {                                                                                         -- nilai untuk diedit pada offset tertentu
+{["value"] =999999, ["offset"] = 12, ["type"] = gg.TYPE_DWORD},
+{["value"] = 1000000, ["offset"] = 16, ["type"] = gg.TYPE_FLOAT},
+--tambahkan nilai edit untuk offset yang Anda tambahkan di tabel untuk ditemukan.
+}
+
+search(find)                                                                                      -- memanggil fungsi pencarian dari baris 35 menggunakan nilai yang diberikan
+ break                                                                             
+ end
+ gg.alert('Selesai')
+ gg.clearResults()
+  ]] , false)
+gg.alert('©Disalin')
+end
+
+
+
+MyMenu = {
+	{"🔁Bekerja dengan Offset\n~~~~~~~~~~~~~~~~~~ \n🔁Pendahuluan\n~~~~~~~~~~~ \n🔁Mendekati\n~~~~~~~~~~~~~~~~~~", true}, {
+		"🔰Arti Offset🤔", introduction,
+		"🔰Menerapkan Definisi pada Skrip📃", application,
+		"🔰Contoh Sangat Dasar\n(1 Hasil Pencarian && 1 Offset)📓", basic,
+		"🔰Mengedit Nilai pada Offset yang Sama untuk beberapa Hasil Pencarian📔", results,
+		"🔰Mengedit Berbagai Nilai Offset dari 1 Hasil Pencarian📕", offsets,
+        "🔰Mengedit Nilai Offset Berbeda untuk Beberapa Hasil Pencarian🗃️", different,
+        "🔰 Beberapa Hasil Pencarian, Banyak Offset, Beberapa Tipe Data, Beberapa Nilai Edit📚",tables,
+		}
+}
+
+gg.setVisible(false)
+gg.alert("©Hack\n©YouTube : VELLIX_AO\n©Fb: Kurol watu\n©Subscribe Channel Free")
+
+function initMenu(Menu, prevMenu)
+	local title, menuType, cOpt, _opt = Menu[1][1], Menu[1][2], {{},{}}
+	for _ = 1, #Menu[2], 2 do
+		name, func = Menu[2][_], Menu[2][_ + 1]
+		cOpt[1][#cOpt[1] + 1] = (type(func) == "table" and name.." >" or name)
+		cOpt[2][#cOpt[2] + 1] = func
+	end
+	cOpt[1][#cOpt[1] + 1] = (prevMenu and "< Back to " .. prevMenu[1][1] or "↩️Quit Script")
+	
+
+	while(true) do
+		if gg.isVisible() then gg.setVisible(false)
+			if menuType then _opt = gg.multiChoice(cOpt[1], nil, title) else _opt = gg.choice(cOpt[1], nil, title) end
+			if _opt then	
+					-- multiChoice Handler  
+					for _ = 1, #cOpt[1] do
+						if _opt[_] then
+							efunc = cOpt[2][_]
+							if efunc then
+								if type(efunc) ~= "table" then efunc() else gg.setVisible(true) initMenu(efunc, Menu) end
+							else
+								gg.setVisible(true)
+								return
+							end
+						end
+					end
+			end
+		end
+		gg.sleep(300)
+	end
+end
+
+initMenu(MyMenu)
