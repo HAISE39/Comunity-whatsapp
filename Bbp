@@ -1,0 +1,81 @@
+gg.setVisible(false)
+function BYPASS1()
+  local menudebug = gg.choice({
+    "1. Anti Force Close Saat Login",
+    "2. Stabilizer Saat Pindah Map",
+    "3. Clear Memory Manual",
+    "4. Keluar"
+  }, nil, "Aurcus Online | Script Stabilizer")
+
+  if menudebug == 1 then
+    antiLogin()
+  elseif menudebug == 2 then
+    mapStabilizer()
+  elseif menudebug == 3 then
+    clearMemory()
+  elseif menudebug == 4 then
+    HOME()
+  end
+end
+
+function antiLogin()
+  gg.clearResults()
+  gg.searchNumber("1337;1;0;0::17", gg.TYPE_DWORD)
+  gg.refineNumber("1337")
+  local r = gg.getResults(10)
+  for i, v in ipairs(r) do
+    v.value = "0"
+    v.freeze = true
+  end
+  gg.addListItems(r)
+  gg.toast("Anti Force Close Login Aktif")
+end
+
+function mapStabilizer()
+  gg.setVisible(false)
+
+function disableGGDetection()
+  gg.setRanges(gg.REGION_CODE_APP | gg.REGION_JAVA_HEAP)
+  gg.searchNumber("4761214;1162690580::17", gg.TYPE_DWORD) -- Nilai acak yang sering muncul dari libgg
+  gg.clearResults()
+  gg.toast("Bypass Deteksi GG Aktif")
+end
+
+function advancedMapStabilizer()
+ 
+  gg.clearResults()
+  gg.setRanges(gg.REGION_C_ALLOC)
+  gg.searchNumber("20000000~60000000", gg.TYPE_DWORD)
+  local res = gg.getResults(20)
+  for i, v in ipairs(res) do
+    v.value = "0"
+    v.freeze = true
+  end
+  gg.addListItems(res)
+  gg.toast("Advanced Stabilizer Aktif")
+end
+
+disableGGDetection()
+advancedMapStabilizer()
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_DATA)
+gg.searchNumber("gg", gg.TYPE_BYTE)
+gg.clearResults()
+gg.clearList()
+gg.toast("Mode Hantu Aktif: GG Disembunyikan Total")
+gg.toast("Map Crash Protection Siap. Sekarang coba pindah map.")
+end
+
+function clearMemory()
+  gg.clearResults()
+  gg.clearList()
+  gg.toast("Memory Game Guardian Dibersihkan")
+end
+
+while true do
+  if gg.isVisible(true) then
+    gg.setVisible(false)
+     BYPASS1()
+  end
+end
