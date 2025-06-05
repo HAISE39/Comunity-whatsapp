@@ -1,4 +1,3 @@
-gg.setVisible(false)
 function BYPASS1()
   local menudebug = gg.choice({
     "1. Anti Force Close Saat Login",
